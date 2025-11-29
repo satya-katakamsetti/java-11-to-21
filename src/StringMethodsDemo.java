@@ -1,4 +1,30 @@
 public class StringMethodsDemo {
+/*
+     * Java has introduced several useful methods to the `String` class in recent
+     * versions (Java 11, 12, and 15), making common text manipulations more
+     * convenient and expressive.
+     *
+     * Key points:
+     *  - `isBlank()` (Java 11): Checks if a string is empty or contains only whitespace.
+     *    A more intuitive check than `trim().isEmpty()`.
+     *  - `lines()` (Java 11): Returns a `Stream<String>` of lines from a multi-line string.
+     *  - `repeat(n)` (Java 11): Repeats the string `n` times.
+     *  - `strip()`, `stripLeading()`, `stripTrailing()` (Java 11): Unicode-aware
+     *    alternatives to `trim()`.
+     *  - `indent(n)` (Java 12): Adds or removes leading whitespace from each line.
+     *  - `transform(fn)` (Java 12): Applies a function to the string, enabling
+     *    fluent, chainable transformations.
+     *
+     * Example:
+     *   var result = "  hello_world  "
+     *           .transform(String::strip)
+     *           .transform(String::toUpperCase)
+     *           .transform(s -> s.replace("_", " "));
+     *
+     * Purpose:
+     *   To provide modern, convenient, and often functionally-oriented methods for
+     *   common string operations, reducing the need for external libraries like Apache Commons Lang.
+     */
 
     public static void main(String[] args) {
         var emptyString = "";
